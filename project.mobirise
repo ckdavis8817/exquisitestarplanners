@@ -134,61 +134,6 @@
             ".carousel-img": {
               "width": "100%",
               "text-align": "center",
-              "margin": "0"
-            },
-            ".container-fluid": {
-              "max-width": "100%",
-              "padding": "0"
-            },
-            "& when (@showTitle)": {
-              ".mbr-section-title": {
-                "line-height": "1"
-              }
-            },
-            "& when (@showSubtitle)": {
-              ".mbr-text": {
-                "padding-bottom": "0",
-                "margin": "0",
-                "color": "#a2a0a0"
-              }
-            },
-            "& when (@showTitle), (@showSubtitle)": {
-              ".text-block": {
-                "margin": "auto"
-              },
-              ".slider-box": {
-                "margin-top": "3rem"
-              }
-            }
-          },
-          "_name": "carousel1",
-          "_customHTML": "<section class=\"carousel1 slider\" group=\"Carousels & Sliders\" plugins=\"amp-main, amp-carousel\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <select title=\"Images\" name=\"imagesAmount\">\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n            <option value=\"6\">6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container-fluid\">\n        <div class=\"text-block mbr-col-sm-12 mbr-col-md-10\" mbr-if=\"showTitle || showSubtitle\">\n            <h2 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                 For The Star In You</h2>\n            <p class=\"mbr-fonts-style mbr-text align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-text\">\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit omnis us, pur! Molestiae voluptate ipsam ab earum unde?\n            </p>\n        </div>\n        <div class=\"slider-box\">\n            <amp-carousel class=\"carousel\" height=\"400\" layout=\"fixed-height\" type=\"carousel\">\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/remycake2-528x960.jpg\" height=\"400\" width=\"220.00000000000003\" alt=\"Mobirise\">\n                    <div placeholder class=\"placeholder\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/remycake2-528x960.jpg\" alt=\"Mobirise\" title>\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/tshotsglass-950x960.jpg\" mbr-class=\"{'super-hide': imagesAmount < 2}\" height=\"400\" width=\"395.83333333333337\" alt=\"Mobirise\">\n                    <div placeholder class=\"placeholder\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/tshotsglass-950x960.jpg\" alt=\"Mobirise\" title>\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/partycake3-960x720.jpg\" mbr-class=\"{'super-hide': imagesAmount < 3}\" height=\"400\" width=\"533.3333333333333\" alt=\"Mobirise\">\n                    <div placeholder class=\"placeholder\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/partycake3-960x720.jpg\" alt=\"Mobirise\" title>\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/painting1-960x720.jpg\" mbr-class=\"{'super-hide': imagesAmount < 4}\" height=\"400\" width=\"533.3333333333333\" alt=\"Mobirise\">\n                    <div placeholder class=\"placeholder\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/painting1-960x720.jpg\" alt=\"Mobirise\" title>\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/partytable2-960x720.jpg\" mbr-class=\"{'super-hide': imagesAmount < 5}\" height=\"400\" width=\"533.3333333333333\" alt=\"Mobirise\">\n                    <div placeholder class=\"placeholder\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/partytable2-960x720.jpg\" alt=\"Mobirise\" title>\n                </amp-img>\n                <amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/06.jpg\" mbr-class=\"{'super-hide': imagesAmount < 6}\" height=\"400\" width=\"600\" alt=\"Mobirise\">\n                    <div placeholder class=\"placeholder\">\n                        <div class=\"mobirise-spinner\">\n                            <em></em>\n                            <em></em>\n                            <em></em>\n                        </div>\n                    </div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/06.jpg\" alt=\"Mobirise\">\n                </amp-img>\n            </amp-carousel>\n        </div>\n    </div>\n</section>",
-          "_cid": "r3RrJpYUIy",
-          "_anchor": "carousel1-2",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".carousel-img": {
-              "width": "100%",
-              "text-align": "center",
               "display": "flex",
               "justify-content": "center",
               "align-items": "center"
